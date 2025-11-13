@@ -8,7 +8,7 @@ exports.addOrder = async (req, res) => {
         const result = await db.collection('orders').insertOne(newOrder);
         res.status(201).json({ insertedId: result.insertedId, ...newOrder });
     } catch (error) {
-        res.status(400).json({ message: "Error adding order", error });
+        res.status(400).json({ message: "Error adding order", erro });
     }
 };
 
