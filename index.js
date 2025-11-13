@@ -7,7 +7,7 @@ const listingRoutes = require('./routes/listingRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 
 const app = express();
-const port = process.env.PORT || 300;
+const port = process.env.PORT || 3000;
 const uri = process.env.DATABASE_URL;
 const dbName = process.env.DATABASE_NAME;
 
