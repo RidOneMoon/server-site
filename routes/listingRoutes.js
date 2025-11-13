@@ -4,7 +4,7 @@ const router = express.Router();
 const listingsController = require('../controllers/listingsController');
 
 // Pub
- 
+router.get('/', listingsController.getAllListings); 
 router.get('/recent', listingsController.getRecentListings); 
 router.get('/:id', listingsController.getListingById); 
 
