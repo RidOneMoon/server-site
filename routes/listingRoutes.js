@@ -3,15 +3,27 @@ const express = require('express');
 const router = express.Router();
 const listingsController = require('../controllers/listingsController');
 
-// Pub
-router.get('/', listingsController.getAllListings); 
+
 router.get('/recent', listingsController.getRecentListings); 
-router.get('/:id', listingsController.getListingById); 
+
+
+// Pub
+router.get('/:id',(req, res, next) => {
+    console.log("get list by id running ");
+    next()
+} ,listingsController.getListingById); 
+
+
+router.post('/add',listingsController.addListing);
+router.get('/', listingsController.getAllListings); 
+
+
+
 
 // Pri
-router.post('/', listingsController.addListing); 
-router.post('/batch', listingsController.addListings); 
-router.get('/my-listings', listingsController.getMyListings); 
+router.get('/lists/:email', listingsController.getMyListings); 
+
+
 router.put('/:id', listingsController.updateListing); 
 router.delete('/:id', listingsController.deleteListing); 
 

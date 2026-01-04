@@ -36,15 +36,17 @@ exports.getMyOrders = async (req, res) => {
     const db = getDb(req);
     const { email } = req.query;
 
+
     if (!email) {
         return res.status(400).json({ message: 'User email is required to fetch orders' });
     }
 
     try {
         const orders = await db.collection('orders')
-            .find({ email })
+            .find({ email: email })
             .sort({ orderedAt: -1 })
             .toArray();
+
 
         res.status(200).json(orders);
     } catch (error) {

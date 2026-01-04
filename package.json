@@ -1,0 +1,31 @@
+{
+  "name": "server-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RidOneMoon/server-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RidOneMoon/server-site/issues"
+  },
+  "homepage": "https://github.com/RidOneMoon/server-site#readme",
+  "dependencies": {
+    "@tanstack/react-query": "^5.90.9",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongodb": "^7.0.0",
+    "swiper": "^12.0.3",
+    "zustand": "^5.0.8"
+  }
+}
